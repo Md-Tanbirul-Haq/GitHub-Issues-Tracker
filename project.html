@@ -32,7 +32,7 @@
         <div class="bg-white mt-10 mb-5 py-4 px-4 rounded-lg flex gap-2 flex-wrap">
             <button id="all_btn" class="btn btn-primary w-[100px]">All</button>
             <button id="open_btn" onclick="open_issues()" class="btn w-[100px]">Open</button>
-            <button id="closed_btn" class="btn w-[100px]">Closed</button>
+            <button id="closed_btn" onclick="closed_issues()" class="btn w-[100px]">Closed</button>
         </div>
 
         <section class="bg-neutral-300/50 pb-5 rounded-lg">
@@ -64,6 +64,9 @@
 
             <!-- Open issues  -->
             <div id="open_" class="px-4 grid grid-cols-4 gap-5">
+
+            </div>
+            <div id="closed_" class="px-4 grid grid-cols-4 gap-5">
 
             </div>
         </section>
