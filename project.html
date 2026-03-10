@@ -30,9 +30,9 @@
     </nav>
     <section class="w-10/12 mx-auto">
         <div class="bg-white mt-10 mb-5 py-4 px-4 rounded-lg flex gap-2 flex-wrap">
-            <button class="btn btn-primary w-[100px]">All</button>
-            <button class="btn w-[100px]">Open</button>
-            <button class="btn w-[100px]">Closed</button>
+            <button id="all_btn" class="btn btn-primary w-[100px]">All</button>
+            <button id="open_btn" onclick="open_issues()" class="btn w-[100px]">Open</button>
+            <button id="closed_btn" class="btn w-[100px]">Closed</button>
         </div>
 
         <section class="bg-neutral-300/50 pb-5 rounded-lg">
@@ -40,7 +40,7 @@
                 <div class="flex items-center gap-1">
                     <div><img src="images/2.png" alt=""></div>
                     <div>
-                        <div>50 Issues</div>
+                        <div> <span id="issues_number">50</span> Issues</div>
                         <div class="text-neutral-500/50">Track and manage your project issues</div>
                     </div>
                 </div>
@@ -56,32 +56,14 @@
                 </div>
             </div>
 
+            <!-- Total issuses -->
             <div id="total" class=" px-4 grid grid-cols-4 gap-5">
 
 
-                <!-- <div class="bg-white rounded-lg">
-                    <div class="px-5 py-5">
-                        <div class="flex justify-between">
-                            <div><img src="images/3.png" alt=""></div>
-                            <div><button
-                                    class="bg-yellow-200/50 text-yellow-500 font-bold rounded-full px-5 ">High</button>
-                            </div>
-                        </div>
-                        <p class="text-2xl font-bold my-2">Fix navigation menu on mobile devices</p>
-                        <p class="text-neutral-500/50">The navigation menu doesn't collapse properly on mobile
-                            devices...
-                        </p>
+            </div>
 
-                        <p>labels</p>
-                    </div>
-                    <div class="text-neutral-300/50">
-                        <hr>
-                    </div>
-                    <div class="px-5 py-5">
-                        <p class="text-neutral-500/50">Author</p>
-                        <p class="text-neutral-500/50">date</p>
-                    </div>
-                </div> -->
+            <!-- Open issues  -->
+            <div id="open_" class="px-4 grid grid-cols-4 gap-5">
 
             </div>
         </section>
