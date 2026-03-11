@@ -18,7 +18,8 @@ function div(total, e) {
 
     });
     const div = document.createElement('div')
-    div.innerHTML = `  <div class=" rounded-lg border-t-[5px] ${e.status == "open" ? 'border-green-400' : 'border-purple-400'}">
+    div.innerHTML = ` <div onclick="detail(${e.id})">
+    <div class=" rounded-lg border-t-[5px] ${e.status == "open" ? 'border-green-400' : 'border-purple-400'}">
                     <div class="px-5 py-5">
                         <div class="flex justify-between">
                             <div>${e.status == "open" ? ' <img src="images/3.png" alt="">' : '<img src="images/1.png" alt=""></img>'} </div>
@@ -42,7 +43,9 @@ function div(total, e) {
                         <p class="text-neutral-500/50">#${e.id} by ${e.author}</p>
                         <p class="text-neutral-500/50">${e.createdAt.split('T')[0]}</p>
                     </div>
-                </div > `
+                </div > 
+    
+    </div> `
 
     div.classList.add('bg-white', 'rounded-lg')
     total.appendChild(div)

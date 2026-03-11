@@ -7,6 +7,53 @@ const log_in = () => {
         window.location.assign("project.html")
     }
 }
+
+function detail(Id) {
+    fetch(`https://phi-lab-server.vercel.app/api/v1/lab/issue/${Id}`)
+        .then(response => response.json())
+        .then(data => {
+            let e = data.data
+            const modal = document.getElementById('modal_')
+            modal.innerHTML = ""
+            const div = document.createElement('div')
+            div.innerHTML = `
+                 <div class="modal-box">
+                    <p class="text-2xl font-bold">${e.title}</p>
+                    <p class="text-neutral-500/50 mt-2">${e.description}</p>
+
+                    <div class="flex justify-around bg-neutral-300/50 py-5 rounded-lg my-10">
+                        <div>
+                            <p class="text-neutral-500/50">Assignee:</p>
+                            <p class="text-xl font-bold">${e.assignee}</p>
+                        </div>
+                        <div>
+                            <p class="text-neutral-500/50">Priority:</p>
+                            <p><button class="bg-red-400 text-white px-4 rounded-full">${e.priority}</button></p>
+                        </div>
+                    </div>
+                    <div class="modal-action">
+                        <form method="dialog">
+
+                            <button class="btn btn-primary">Close</button>
+                        </form>
+                    </div>
+                </div>
+                
+                `
+            modal.appendChild(div)
+            modal.showModal()
+        });
+
+
+
+
+
+
+
+
+
+}
+
 const search_ = () => {
     const search = document.getElementById('search').value
     search_issues(search)
