@@ -18,7 +18,7 @@ function div(total, e) {
 
     });
     const div = document.createElement('div')
-    div.innerHTML = `  <div class="bg-white rounded-lg">
+    div.innerHTML = `  <div class=" rounded-lg border-t-[5px] ${e.status == "open" ? 'border-green-400' : 'border-purple-400'}">
                     <div class="px-5 py-5">
                         <div class="flex justify-between">
                             <div>${e.status == "open" ? ' <img src="images/3.png" alt="">' : '<img src="images/1.png" alt=""></img>'} </div>
